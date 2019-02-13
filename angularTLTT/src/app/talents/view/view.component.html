@@ -1,0 +1,57 @@
+<div class="container mt-3 mb-3">
+    <div class="col-md-6 mb-4 m-auto ">
+  
+      <div class="card">
+  
+        <h5 class="card-header info-color white-text text-center py-4">
+          <strong>View Talent</strong>
+        </h5>
+        <!--Card content-->
+        <div class="card-body px-lg-5 pt-0">
+  
+          <!-- Form -->
+          <form class="text-center" style="color: #757575;" > 
+            <div class="md-form mt-4">
+                <img src="{{this.talentService.selectedTalent.Image}}"  name="Image" style="width:305px;height:325px" />
+            </div>
+            <div class="mt-0 float-left">
+                <label class="mb-0">Name</label>
+              </div>
+              <div class="md-form mt-4">
+                <input type="text" id="Name" name="Name" disabled value="{{this.talentService.selectedTalent.Name}}" class="form-control">
+              </div>
+    
+              <div class="mt-0 float-left">
+                <label class="mb-0">Short Name</label>
+              </div>
+              <div class="md-form mt-0">
+                <input type="text" id="ShortName" name="ShortName"  disabled value="{{this.talentService.selectedTalent.ShortName}}" class="form-control">
+              </div>
+              
+              <div class="mt-0 float-left">
+                  <label class="mb-0">Reknown</label>
+                </div>
+                <div class="md-form mt-0">
+                  <input type="text" id="Reknown" name="Reknown"   disabled value="{{this.talentService.selectedTalent.Reknown}}" class="form-control">
+                </div>
+
+                <div class="mt-0 float-left">
+                    <label class="mb-0">Bio</label>
+                  </div>
+                  <div class="md-form mt-0">
+                    <input type="text" id="Bio" name="Bio"   disabled value="{{this.talentService.selectedTalent.Bio}}" class="form-control">
+                  </div>
+            <!-- Sign up button -->
+            <div id="signUpDiv"></div>
+            <!-- <button [disabled]="!talentForm.valid" type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" >Add Talent</button> -->
+  
+            <hr>
+          </form>
+          <!-- Form -->
+  
+        </div>
+  
+      </div>
+  
+    </div>
+  </div>

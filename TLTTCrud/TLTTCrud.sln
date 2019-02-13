@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2047
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TLTTCrud", "TLTTCrud\TLTTCrud.csproj", "{57470835-9EDB-4390-BB25-83A1AC5E0978}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57470835-9EDB-4390-BB25-83A1AC5E0978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57470835-9EDB-4390-BB25-83A1AC5E0978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57470835-9EDB-4390-BB25-83A1AC5E0978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57470835-9EDB-4390-BB25-83A1AC5E0978}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D3943C59-5ED1-461B-92E5-3AB62B6E68B8}
+	EndGlobalSection
+EndGlobal

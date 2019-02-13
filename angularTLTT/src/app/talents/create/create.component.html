@@ -1,0 +1,59 @@
+<div class="container mt-3 mb-3">
+  <div class="col-md-6 mb-4 m-auto ">
+
+    <div class="card">
+
+      <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Create Talent</strong>
+      </h5>
+      <!--Card content-->
+      <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" #talentForm="ngForm" (ngSubmit)="onSubmit(talentForm)"> 
+          <div class="md-form mt-4">
+              <label for="materialRegisterFormImage">Image</label>
+              <input accept="image/x-png,image/gif,image/jpeg" name="Image" #Image="ngModel" [(ngModel)]="this.talentService.selectedTalent.Image" type="file" (change)="selectFile($event)" required>
+          </div>
+          <!-- E-mail -->
+          <div class="md-form mt-0">
+            <input type="text" id="materialRegisterFormName"  class="form-control" name="Name" #Name="ngModel" [(ngModel)]="this.talentService.selectedTalent.Name" required>
+            <label for="materialRegisterFormName">Name</label>
+          </div>
+
+          <!-- E-mail -->
+          <div class="md-form mt-0">
+            <input type="text" id="materialRegisterShortName" class="form-control" name="ShortName" #ShortName="ngModel" [(ngModel)]="this.talentService.selectedTalent.ShortName" required>
+            <label for="materialRegisterFormShortName">Short Name</label>
+          </div>
+          <div class="md-form mt-0">
+            <input type="text" id="materialRegisterFormReknown" class="form-control" name="Reknown" #Reknown="ngModel" [(ngModel)]="this.talentService.selectedTalent.Reknown" required>
+            <label for="materialRegisterFormReknown">Reknown</label>
+          </div>
+          <div class="md-form mt-0">
+            <input type="text" id="materialRegisterFormBio" class="form-control" name="Bio" #Bio="ngModel" [(ngModel)]="this.talentService.selectedTalent.Bio" required>
+            <label for="materialRegisterFormBio">Bio</label>
+          </div>
+
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" [value]="0" id="private" checked ng-control="options" name="Status" #Status="ngModel" required [(ngModel)]="this.talentService.selectedTalent.Status"  >
+            <label class="custom-control-label" for="private">Private</label>
+          </div>
+
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" [value]="1" id="public" ng-control="options" name="Status" #Status="ngModel" required [(ngModel)]="this.talentService.selectedTalent.Status" >
+            <label class="custom-control-label" for="public">Public</label>
+          </div>
+          <!-- Sign up button -->
+          <button [disabled]="!talentForm.valid" type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" >Add Talent</button>
+
+          <hr>
+        </form>
+        <!-- Form -->
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

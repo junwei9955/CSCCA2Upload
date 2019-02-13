@@ -1,0 +1,83 @@
+<div class="container mt-3 mb-3">
+  <div class="col-md-6 mb-4 m-auto ">
+
+    <div class="card">
+
+      <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Update Talent</strong>
+      </h5>
+      <!--Card content-->
+      <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <form class="text-center" style="color: #757575;" #updateForm="ngForm" (ngSubmit)="onSubmit(updateForm)">
+          <input type="hidden" name="TalentId" #TalentId="ngModel" [(ngModel)]="talentService.selectedTalent.TalentId">
+          <div class="md-form mt-4">
+            <img src="{{this.talentService.selectedTalent.Image}}" style="width:305px;height:325px" />
+          </div>
+          <div class="md-form">
+            <label for="materialRegisterFormImage">Image</label>
+            <input accept="image/x-png,image/gif,image/jpeg" type="file" (change)="selectFile($event)">
+            <input type="hidden" id="Image" name="Image" #Image="ngModel" [(ngModel)]="talentService.selectedTalent.Image">
+          </div>
+          <div class="mt-0 float-left">
+            <label class="mb-0">Name</label>
+          </div>
+          <div class="md-form mt-4">
+            <input type="text" id="Name" name="Name" #Name="ngModel" [(ngModel)]="talentService.selectedTalent.Name" class="form-control">
+          </div>
+
+          <div class="mt-0 float-left">
+            <label class="mb-0">Short Name</label>
+          </div>
+          <div class="md-form mt-0">
+            <input type="text" id="ShortName" name="ShortName" #ShortName="ngModel" [(ngModel)]="talentService.selectedTalent.ShortName"
+              class="form-control">
+          </div>
+
+          <div class="mt-0 float-left">
+            <label class="mb-0">Reknown</label>
+          </div>
+          <div class="md-form mt-0">
+            <input type="text" id="Reknown" name="Reknown" #Reknown="ngModel" [(ngModel)]="talentService.selectedTalent.Reknown" class="form-control">
+          </div>
+
+          <div class="mt-0 float-left">
+            <label class="mb-0">Bio</label>
+          </div>
+          <div class="md-form mt-0">
+            <input type="text" id="Bio" name="Bio" #Bio="ngModel" [(ngModel)]="talentService.selectedTalent.Bio" class="form-control">
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" [value]="0" id="private"  ng-control="options" name="Status" #Status="ngModel"
+              required [(ngModel)]="talentService.selectedTalent.Status">
+            <label class="custom-control-label" for="private">Private</label>
+          </div>
+
+          <div class="custom-control custom-radio">
+            <input type="radio" class="custom-control-input" [value]="1" id="public" ng-control="options" name="Status" #Status="ngModel"
+              required [(ngModel)]="talentService.selectedTalent.Status">
+            <label class="custom-control-label" for="public">Public</label>
+          </div>
+          <!-- Sign up button -->
+          <div class="row  text-center">
+            <div class="col-md-4">
+              <button (click)="onDelete(this.id)" class="btn btn-outline-danger btn-rounded btn-block my-4 waves-effect z-depth-0">Delete</button>
+            </div>
+            <div class="col-md-8">
+              <button type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0">Update</button>
+            </div>
+
+          </div>
+          <!-- <button [disabled]="!talentForm.valid" type="submit" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" >Add Talent</button> -->
+
+          <hr>
+        </form>
+        <!-- Form -->
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<form class="form-body" #userRegistrationForm="ngForm" (ngSubmit)="OnSubmit(userRegistrationForm)">
+    <h1 class="h3 mb-3 font-weight-normal">
+      <span>Sign Up</span>
+    </h1>
+    <div class="form-signin">
+      <div class="text-center mb-8">
+       
+
+      </div>
+      <div class="form-label-group">
+          <input type="text" id="inputUserName" name="UserName" class="form-control validate" #UserName="ngModel" [(ngModel)]="user.UserName" placeholder="Username" required autofocus>
+          <label  for="inputUserName">Username</label>
+        </div>
+      <div class="form-label-group">
+        <input type="email" id="inputEmail" name="Email" [pattern]="emailPattern" class="form-control" #Email="ngModel" [(ngModel)]="user.Email" placeholder="Email" required>
+        <label for="inputEmail">Email address</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="password" id="inputPassword" minlength="6" name="Password" class="form-control" #Password="ngModel" [(ngModel)]="user.Password" placeholder="Password" required>
+        <label for="inputPassword">Password</label>
+      </div>
+
+      <div class="form-label-group">
+        <input type="text" id="inputFullName" name="FullName" class="form-control" #FullName="ngModel" [(ngModel)]="user.FullName" placeholder="Full Name" required>
+        <label for="inputFullName">Full Name</label>
+      </div>
+      <re-captcha (resolved)="resolved($event)" [(ngModel)]="user.Captcha"  name="captcha" required siteKey="6Le8KWkUAAAAABd8WMvDrzUj5XQxYNSOmv7JnS6S"></re-captcha>
+    </div>
+    <div class="container bottom-wrapper">
+      <div class="row justify-content-start bottom-form">
+        <div class="col-7 to-signin">
+         <a class="btn btn-block  btn-tosignin" routerLink="/signin">Back to Sign In</a>
+        </div>
+        <div class=" col-5 ">
+          <button  [disabled]="!userRegistrationForm.valid" class="btn btn-block btn-submit" type="submit">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  

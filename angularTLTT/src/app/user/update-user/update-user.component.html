@@ -1,0 +1,160 @@
+<app-navbar></app-navbar>
+<!-- <div class="profile-section mt-5">
+  <div class="container row m-auto">
+    <div class="col-md-6">
+      <div class="row text-center text-lg-left profile-thumbnail">
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <a href="#" class="d-block">
+            <img class="img-fluid" src="assets/img/Asset4.png" alt="">
+          </a>
+          <div class="photo-bottom-wrapper  mb-4">
+            <a>
+              <i class="far fa-heart"></i>
+            </a>
+            <a>
+              <i class="far fa-comment-dots"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <a href="#" class="d-block">
+            <img class="img-fluid" src="assets/img/Asset4.png" alt="">
+          </a>
+          <div class="photo-bottom-wrapper  mb-4">
+            <a>
+              <i class="far fa-heart"></i>
+            </a>
+            <a>
+              <i class="far fa-comment-dots"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <a href="#" class="d-block">
+            <img class="img-fluid" src="assets/img/Asset4.png" alt="">
+          </a>
+          <div class="photo-bottom-wrapper  mb-4">
+            <a>
+              <i class="far fa-heart"></i>
+            </a>
+            <a>
+              <i class="far fa-comment-dots"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <a href="#" class="d-block">
+            <img class="img-fluid" src="assets/img/Asset4.png" alt="">
+          </a>
+          <div class="photo-bottom-wrapper  mb-4">
+            <a>
+              <i class="far fa-heart"></i>
+            </a>
+            <a>
+              <i class="far fa-comment-dots"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <a href="#" class="d-block">
+            <img class="img-fluid" src="assets/img/Asset4.png" alt="">
+          </a>
+          <div class="photo-bottom-wrapper  mb-4">
+            <a>
+              <i class="far fa-heart"></i>
+            </a>
+            <a>
+              <i class="far fa-comment-dots"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-xs-12">
+          <a href="#" class="d-block">
+            <img class="img-fluid" src="assets/img/Asset4.png" alt="">
+          </a>
+          <div class="photo-bottom-wrapper  mb-4">
+            <a>
+              <i class="far fa-heart"></i>
+            </a>
+            <a>
+              <i class="far fa-comment-dots"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="privacy-settings-wrapper">
+        <div class="col-md-5 privacy-settings">
+          <h6>Privacy Settings</h6>
+          <form>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="private" name="groupRadioBtn">
+              <label class="custom-control-label" for="private">Private</label>
+            </div>
+
+             Group of default radios - option 2 
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="public" name="groupRadioBtn" checked>
+              <label class="custom-control-label" for="public">Public</label>
+            </div>
+            <button type="button" class="btn btn-sm btn-primary float-right">Confirm</button>
+          </form>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="container mt-3 mb-3">
+<div class="col-md-6 mb-4 m-auto ">
+
+<div class="card" >
+
+  <h5 class="card-header success-color white-text text-center py-4">
+      <strong>Profile</strong>
+  </h5>
+
+  <!--Card content-->
+  <div class="card-body px-lg-5 pt-0">
+
+      <!-- Form -->
+      <form class="text-center" style="color: #757575;" #userUpdateForm="ngForm" (ngSubmit)="OnSubmit(userUpdateForm)" >
+          
+          <div class="md-form mt-4">
+              <input type="text" id="materialRegisterFormUserName" name="UserName" class="form-control" #UserName="ngModel" [(ngModel)]="user.UserName">
+              <label for="materialRegisterFormUserName">Username</label>
+          </div>
+
+           <!-- E-mail -->
+           <div class="md-form mt-4">
+            <input type="text" id="materialRegisterFormFullName" name="FullName" class="form-control" #FullName="ngModel" [(ngModel)]="user.FullName">
+            <label for="materialRegisterFormEmail">Full Name</label>
+        </div>
+
+          <!-- E-mail -->
+          <div class="md-form mt-0">
+              <input type="email" id="materialRegisterFormEmail" [pattern]="emailPattern" class="form-control" #Email="ngModel" [(ngModel)]="user.Email" name="Email">
+              <label for="materialRegisterFormEmail">E-mail</label>
+          </div>
+
+          <div class="md-form">
+              <input type="password" id="materialRegisterFormPassword" name="Password" class="form-control" #Password="ngModel" [(ngModel)]="user.Password" aria-describedby="materialRegisterFormPasswordHelpBlock">
+              <label for="materialRegisterFormPassword">Password</label>
+              <small id="materialRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+                  At least 6 characters
+              </small>
+          </div>
+          <!-- Sign up button -->
+          <button [disabled]="!userUpdateForm.valid" class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit" >To Update</button>
+
+          <hr>
+      </form>
+      <!-- Form -->
+
+  </div>
+
+</div>
+
+</div>
+</div>

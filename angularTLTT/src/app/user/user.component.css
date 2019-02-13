@@ -1,0 +1,34 @@
+.form-container {
+  display: -webkit-box;
+  display:block;
+  -ms-flex-align: center;
+  -ms-flex-pack: center;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #141518;
+  height:100%;
+}
+
+
+.arrow-back {
+  position: absolute;
+  top:50px;
+  left:50px;
+}
+.arrow-back:hover {
+  cursor: pointer;
+}
+
+.arrow-back > a {
+  color:#ffffff;
+}
+
+.arrow-back > a > img {
+  width:10%;
+  height:100%;
+  margin-right:20px;
+}

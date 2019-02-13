@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="home-section">
+  <div class="container mt-5">
+    <div class="row text-center text-lg-left">
+      
+      <div *ngFor="let talent of this.talentService.allTalentList" class="col-lg-2 col-md-3 col-xs-6">
+        <a href="view/{{talent.TalentId}}" class="d-block">
+          <img class="img-fluid" src="{{talent.Image}}" alt="">
+        </a>
+        <div class="photo-bottom-wrapper  mb-4">
+          <span>{{talent.Name}}</span>
+          <a><i class="far fa-heart"></i></a>
+          <a><i class="far fa-comment-dots"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grid row -->
+</div>

@@ -1,0 +1,125 @@
+<app-navbar></app-navbar>
+<div class="profile-section mt-5">
+  <div class="container row m-auto">
+    <div class="col-md-6">
+      <div class="row text-center text-lg-left profile-thumbnail">
+        <div *ngFor="let talent of this.talentService.talentListByUserId" class="col-lg-4 col-md-6 col-xs-12">
+          <a href="view/{{talent.TalentId}}" class="d-block">
+            <img class="img-fluid" src="{{talent.Image}}" width="155px" height="175px" alt="">
+          </a>
+          <div class="photo-bottom-wrapper  mb-4">
+            <!-- <a>
+              <i class="far fa-heart"></i>
+            </a>
+            <a>
+              <i class="far fa-comment-dots"></i>
+            </a> -->
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <!-- <div class="col-md-6">
+      <div class="privacy-settings-wrapper">
+        <div class="col-md-5 privacy-settings">
+          <h6>Privacy Settings</h6>
+          <form>
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="private" name="groupRadioBtn">
+              <label class="custom-control-label" for="private">Private</label>
+            </div>
+
+            <div class="custom-control custom-radio">
+              <input type="radio" class="custom-control-input" id="public" name="groupRadioBtn" checked>
+              <label class="custom-control-label" for="public">Public</label>
+            </div>
+            <button type="button" class="btn btn-sm btn-primary float-right">Confirm</button>
+          </form>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div> -->
+    <div class="col-md-6 mb-4 m-auto ">
+
+        <div class="card" *ngIf="userClaims">
+    
+          <h5 class="card-header success-color white-text text-center py-4">
+            <strong>Profile</strong>
+          </h5>
+    
+          <div class="card-body px-lg-5 pt-0">
+    
+            <form class="text-center" style="color: #757575;">
+    
+              <div class="mt-0 float-left">
+                <label class="mb-0">Full Name</label>
+              </div>
+              <div class="md-form mt-4">
+                <input type="email" id="materialRegisterFormFullName" autofocus disabled value="{{userClaims.FullName}}" class="form-control">
+              </div>
+    
+              <div class="mt-0 float-left">
+                <label class="mb-0">Email</label>
+              </div>
+              <div class="md-form mt-0">
+                <input type="email" id="materialRegisterFormEmail" autofocus disabled value="{{userClaims.Email}}" class="form-control">
+              </div>
+    
+    
+    
+              <!-- <a class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" routerLink="/update" >To Update</a> -->
+    
+              <hr>
+            </form>
+    
+          </div>
+    
+        </div>
+    
+      </div>
+  </div>
+</div>
+<!-- <div class="container mt-3 mb-3">
+  <div class="col-md-6 mb-4 m-auto ">
+
+    <div class="card" *ngIf="userClaims">
+
+      <h5 class="card-header success-color white-text text-center py-4">
+        <strong>Profile</strong>
+      </h5>
+
+      <div class="card-body px-lg-5 pt-0">
+
+        <form class="text-center" style="color: #757575;">
+
+          <div class="mt-0 float-left">
+            <label class="mb-0">Full Name</label>
+          </div>
+          <div class="md-form mt-4">
+            <input type="email" id="materialRegisterFormFullName" autofocus disabled value="{{userClaims.FullName}}" class="form-control">
+          </div>
+
+          <div class="mt-0 float-left">
+            <label class="mb-0">Email</label>
+          </div>
+          <div class="md-form mt-0">
+            <input type="email" id="materialRegisterFormEmail" autofocus disabled value="{{userClaims.Email}}" class="form-control">
+          </div>
+
+
+
+          <a class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" routerLink="/update" >To Update</a>
+
+          <hr>
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+</div> -->
+<script>
+  document.getElementById("materialRegisterFormFullName").focus();
+  document.getElementById("materialRegisterFormEmail").focus();
+</script>

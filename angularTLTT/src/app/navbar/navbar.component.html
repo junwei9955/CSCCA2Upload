@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-dark navbar-grey">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" routerLink="/home">TLTT</a>
+
+    <!-- Collapse button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav" aria-controls="basicExampleNav"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="basicExampleNav">
+
+
+        <ul *ngIf="userClaims;else loggedOut" class="nav navbar-nav nav-flex-icons ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" routerLink="/create">
+                    <i class="fa fa-plus-square"></i>
+                    <span class="clearfix d-none d-sm-inline-block">New Talent</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa fa-user"></i>
+                    <span class="clearfix d-none d-sm-inline-block">Account</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" routerLink="/profile">Profile</a>
+                    <a class="dropdown-item" (click)="Logout()">Sign Out</a>
+                </div>
+            </li>
+        </ul>
+
+        <ng-template #loggedOut>
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <i class="fa fa-sign-out-alt"></i>
+                        <span routerLink="/signup" class="clearfix d-none d-sm-inline-block">Sign Up</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">
+                        <i class="fa fa-sign-in-alt"></i>
+                        <span routerLink="/signin" class="clearfix d-none d-sm-inline-block">Sign In</span>
+                    </a>
+                </li>
+            </ul>
+
+        </ng-template>
+        <!-- Links -->
+
+    </div>
+    <!-- Collapsible content -->
+
+</nav>

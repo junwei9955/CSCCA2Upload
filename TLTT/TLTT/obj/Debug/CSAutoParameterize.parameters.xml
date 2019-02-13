@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DefaultConnection-Web.config Connection String" description="DefaultConnection Connection String used in web.config by the application to access the database." defaultValue="Server=tlttdatabase.cqtn80kngp9j.us-east-1.rds.amazonaws.com;Port=1433;Database=ttltdb;Uid=cscca2;Pwd=cscca2pass123;" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\poly\\Year\ 3\\CSC\\CA2\\CSCCA2\\TLTT\\TLTT\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="TLTT.Models.ApplicationDbContext-Web.config Connection String" description="TLTT.Models.ApplicationDbContext Connection String used in web.config by the application to access the database." defaultValue="TLTT.Models.ApplicationDbContext_ConnectionString" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="D:\\poly\\Year\ 3\\CSC\\CA2\\CSCCA2\\TLTT\\TLTT\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='TLTT.Models.ApplicationDbContext']/@connectionString" />
+  </parameter>
+</parameters>

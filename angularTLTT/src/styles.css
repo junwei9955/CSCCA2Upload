@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family:"Roboto Condensed Regular";
+    src: url("assets/fonts/RobotoCondensed-Regular.ttf");
+}
+
+@font-face {
+    font-family:"Roboto Condensed Light";
+    src: url("assets/fonts/RobotoCondensed-Light.ttf");
+}
+
+@font-face {
+    font-family:"Roboto Condensed Bold";
+    src: url("assets/fonts/RobotoCondensed-Bold.ttf");
+}
+
+body {
+    font-family: 'Roboto Condensed Regular';
+}
+
+input.ng-invalid.ng-dirty {
+    border: 2px solid #e91e63 !important;
+}
