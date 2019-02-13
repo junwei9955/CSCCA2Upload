@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 
 @Injectable()
 export class UserService {
-  readonly rootUrl = 'http://ec2-52-87-177-125.compute-1.amazonaws.com';
+  readonly rootUrl = 'ec2 instance url';
 
   constructor(private http: HttpClient) { }
 

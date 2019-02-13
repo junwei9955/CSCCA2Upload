@@ -11,8 +11,8 @@ import * as S3 from 'aws-sdk/clients/s3';
 
 @Injectable()
 export class TalentService {
-  readonly rootUrl = 'http://ec2-34-238-122-56.compute-1.amazonaws.com/';
-  readonly s3BaseUrl = 'https://csca2tltt.s3.amazonaws.com';
+  readonly rootUrl = 'ec2 instance url';
+  readonly s3BaseUrl = 's3 url';
   selectedTalent : Talent;
   talentListByUserId : Talent[];
   allTalentList : Talent[];
@@ -23,8 +23,8 @@ export class TalentService {
     console.log(file)
     const bucket = new S3(
       {
-        accessKeyId: 'AKIAJNJXCD2ZTQ3LWD7Q',
-        secretAccessKey: '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'
+        accessKeyId: 's3 access key',
+        secretAccessKey: 's3 secret access key'
       }
     );
     const params = {
